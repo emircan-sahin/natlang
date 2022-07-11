@@ -1,0 +1,60 @@
+/* font-family: 'Alatsi', sans-serif; */
+@import url('https://fonts.googleapis.com/css?family=Alatsi&display=swap');
+
+* {
+    font-family: 'Alatsi', sans-serif;
+}
+
+/* Framework Start */
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+/* Framework Finish */
+
+.g-bg-yellow {
+    background-color: #DEB23A !important;
+}
+
+.g-bg-dark {
+    background-color: #1C2127 !important;
+}
+
+.g-text-yellow {
+    color: #DEB23A !important;
+}
+
+.g-text-dark {
+    color: #1C2127 !important;
+}
+
+.g-border-yellow {
+    border-color: #DEB23A !important;
+}
+
+.header span {
+    font-size: 20px;
+}
+
+
+.tutorial .word-list li {
+    font-family: 'Alatsi', sans-serif;
+}
+
+.home .link-items i, .home .link-items span {
+    font-family: 'Alatsi', sans-serif;
+    font-size: 22px;
+}
+
+.home .link-items::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.home .link-items::-webkit-scrollbar {
+    background-color: transparent;
+}
+
+.home .link-items::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
