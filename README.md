@@ -14,6 +14,8 @@ The project includes both tutorials and quizzes.
 Sorry for my English is low level. So I wrote it using simple English. I learning English and I think I will solve this problem soon.
 
 # Screenshots
-<img src="./Screenshot_1.png" width="200" height="400" />
-<img src="./Screenshot_2.png" width="200" height="400" />
-<img src="./Screenshot_3.png" width="200" height="400" />
+<div style="display: flex; flex-direction: row;">
+  <img src="./Screenshot_1.png" width="200" height="400" />
+  <img src="./Screenshot_2.png" width="200" height="400" />
+  <img src="./Screenshot_3.png" width="200" height="400" />
+</div>
