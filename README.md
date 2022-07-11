@@ -15,3 +15,5 @@ Sorry for my English is low level. So I wrote it using simple English. I learnin
 
 # Screenshots
 ![alt text](./Screenshot_1.png)
+![alt text](./Screenshot_2.png)
+![alt text](./Screenshot_3.png)
