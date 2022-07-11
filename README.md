@@ -15,7 +15,7 @@ Sorry for my English is low level. So I wrote it using simple English. I learnin
 
 # Screenshots
 <div style="display: flex; flex-direction: row;">
-  <img src="./Screenshot_1.png" width="200" height="400" />
-  <img src="./Screenshot_2.png" width="200" height="400" />
-  <img src="./Screenshot_3.png" width="200" height="400" />
+  <img src="./Screenshot_1.png" width="300" />
+  <img src="./Screenshot_2.png" width="300" />
+  <img src="./Screenshot_3.png" width="300" />
 </div>
