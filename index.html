@@ -32,7 +32,7 @@
 
         <div v-show="mode === 'test'" class="container-fluid">
             <div class="row justify-content-center align-items-center py-1 mt-3">
-                <div v-for="(c, i) in words[category]" class="mx-1 px-1 py-1 rounded-circle"
+                <div v-for="(c, i) in words[category]" class="mx-1 px-1 py-1 rounded-circle mt-3"
                     v-bind:class="{ 'g-bg-yellow': test_finished_answers > i, 'bg-dark': test_finished_answers <= i }">
                 </div>
             </div>
