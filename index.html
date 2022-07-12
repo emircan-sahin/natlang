@@ -16,9 +16,10 @@
 </head>
 
 <body class="g-bg-dark">
-
     <div id="app">
         <audio src="" hidden></audio>
+
+        <!-- Header Component -->
         <div class="container-fluid header sticky-top">
             <div class="row py-2 shadow g-bg-yellow g-text-dark align-items-center">
                 <a href="./" class="col-1 text-decoration-none g-text-dark text-center">
@@ -30,6 +31,27 @@
             </div>
         </div>
 
+        <!-- Home Component -->
+        <div v-show="mode === ''" class="container-fluid text-white home">
+            <div class="container">
+                <h3 class="g-text-yellow mt-5">Tutorials</h3>
+                <div v-for="(c, i) in Object.keys(words)" class="row flex-nowrap overflow-auto link-items pr-4 ml-5">
+                    <a v-bind:href=`./?category=${c}?mode=tutorial` class="col-12 g-text-yellow py-2">
+                        <span>{{ c }}</span>
+                        <span class="float-right text-warning">({{words[c].length}})</span>
+                    </a>
+                </div>
+                <h3 class="g-text-yellow mt-5">Tests</h3>
+                <div v-for="(c, i) in Object.keys(words)" class="row flex-nowrap overflow-auto link-items pr-4 ml-5">
+                    <a v-bind:href=`./?category=${c}?mode=test` class="col-12 g-text-yellow py-2">
+                        <span>{{ c }}</span>
+                        <span class="float-right text-warning">({{words[c].length}})</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Test Component -->
         <div v-show="mode === 'test'" class="container-fluid">
             <div class="row justify-content-center align-items-center py-1 mt-3">
                 <div v-for="(c, i) in words[category]" class="mx-1 px-1 py-1 rounded-circle mt-3"
@@ -41,13 +63,15 @@
 
             <div class="mt-5">
                 <button v-on:click="select_answer" v-bind:target-lg="answer.tr" v-for="(answer, index) in answers"
-                    class="btn btn-outline-dark g-text-yellow answer d-block mt-4 w-100 g-border-yellow text-left">{{ answer.en }}
+                    class="btn btn-outline-dark g-text-yellow answer d-block mt-4 w-100 g-border-yellow text-left">{{
+                    answer.en }}
                 </button>
             </div>
             <button v-if="nextAnswer" v-on:click="refresh_answers()"
                 class="btn btn-outline-dark g-text-yellow answer d-block mt-4 g-border-yellow ml-auto mr-auto w-50">Devam</button>
-
         </div>
+
+        <!-- Tutorial Component -->
         <div v-show="mode === 'tutorial'" class="tutorial">
             <div class="container-fluid">
                 <div class="container">
@@ -67,22 +91,6 @@
                             </div>
                         </li>
                     </ul>
-                </div>
-            </div>
-        </div>
-        <div v-show="mode === ''" class="container-fluid text-white home">
-            <div class="container">
-                <h3 class="g-text-yellow mt-5">Öğretici</h3>
-                <div v-for="(c, i) in Object.keys(words)" class="row flex-nowrap overflow-auto link-items pr-4 ml-5">
-                    <a v-bind:href=`./?category=${c}?mode=tutorial` class="col-4 text-center g-text-yellow py-2">
-                        <span>{{ c }}</span>
-                    </a>
-                </div>
-                <h3 class="g-text-yellow mt-5">Test</h3>
-                <div v-for="(c, i) in Object.keys(words)" class="row flex-nowrap overflow-auto link-items pr-4 ml-5">
-                    <a v-bind:href=`./?category=${c}?mode=test` class="col-4 text-center g-text-yellow py-2">
-                        <span>{{ c }}</span>
-                    </a>
                 </div>
             </div>
         </div>

@@ -205,6 +205,18 @@ const app = new Vue({
         this.param('mode') === undefined ? '' : this.mode = this.param('mode');
 
         if (this.mode === 'test') {
+            const words = [];
+
+            for(var i = 0; i < 10; i++) {
+                const stateWordsLength = this.words[this.category].length;
+                const word = this.words[this.category][Math.floor(Math.random() * stateWordsLength)];
+                words.push(word);
+            }
+
+            this.words[this.category] = words;
+
+            // this.words[category] = '';
+
             this.questionIndex = Math.floor(Math.random() * this.words[this.category].length);
             this.question = this.words[this.category][this.questionIndex].split('|')[0];
             this.refresh_answers();
